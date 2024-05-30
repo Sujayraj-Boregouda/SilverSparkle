@@ -25,6 +25,8 @@ npm run dev
 
 ## Technologies Used
 
+Vite.js
+Tailwind.css
 @reduxjs/toolkit
 react-icons
 react-redux
@@ -32,5 +34,4 @@ react-router-dom
 react-slick
 react-stripe-checkout
 slick-carousel
-Vite
 
