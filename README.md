@@ -1,8 +1,37 @@
-# React + Vite
+# SilverSparkle Jewelry Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the SilverSparkle Jewelry website! This project showcases a stunning collection of silver jewelry.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Technologies Used](#technologies-used)
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd <project-folder>
+
+2. Install dependencies:
+npm install
+
+3. Start the development server:
+npm run dev
+
+## Technologies Used
+
+Vite.js
+Tailwind.css
+@reduxjs/toolkit
+react-icons
+react-redux
+react-router-dom
+react-slick
+react-stripe-checkout
+slick-carousel
+
