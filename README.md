@@ -21,7 +21,7 @@ cd <project-folder>
 npm install
 
 3. Start the development server:
-npm start
+npm run dev
 
 ## Technologies Used
 
@@ -32,4 +32,5 @@ react-router-dom
 react-slick
 react-stripe-checkout
 slick-carousel
+Vite
 
