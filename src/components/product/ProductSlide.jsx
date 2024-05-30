@@ -59,6 +59,14 @@ export const ProductSlideCard = () => {
         prevArrow: <SamplePrevArrow />,
         responsive: [
             {
+                breakpoint: 1280,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    intialSlide: 3,
+                }
+            },
+            {
                 breakpoint: 800,
                 settings: {
                     slidesToShow: 2,

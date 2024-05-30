@@ -133,7 +133,7 @@ export const ProductCard = ({id, key, title, description, images, price, discoun
                                 <BodyOne className="text-sm leading-6">{description}</BodyOne>
                                 <div className="flex items-center gap-3">
                                     <input type="text" value="1" className="w-12 h-12 text-primary outline-none border-2 border-primary px-4" />
-                                    <button className="primary-btn">ADD TO CART</button>
+                                    <button onClick={addToCart} className="primary-btn">ADD TO CART</button>
                                 </div>
 
                                 <hr className="my-5"/>

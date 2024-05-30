@@ -57,7 +57,6 @@ export const Hero = () => {
                 ))}
             </Slider>
         </section>
-        <Banner/>
     </div>
   )
 }
@@ -75,12 +74,12 @@ export const HeroItem = ({title, description, prices, colors, image}) => {
         setSelectedColor(color);
         setSelectedPrice(newSelectedPrice);
     }
-
+    
     return (
         <>
-            <section className="content flex justify-between lg:px-16 h-[50vh] lg:h-[90vh] relative z-20">
-                <div className="left w-1/2 p-8 lg:pt-32 lg:py-32 lg:pb-64">
-                    <Title level={1} className={`leading-none font-medium md:text-3xl lg:text-[70px] lg:leading-tight pb-5`}>{title}</Title>
+            <section className="content flex justify-between lg:px-16 h-[60vh] lg:h-[90vh] relative z-20">
+                <div className="hidden md:block left w-1/2 p-8 lg:pt-32 lg:py-32 lg:pb-64">
+                    <Title level={1} className={`leading-none font-medium  md:text-3xl lg:text-[70px] lg:leading-tight pb-5`}>{title}</Title>
                     <BodyOne>{description}</BodyOne>
 
                     <div className="flex items-start gap-8 my-5 pt-1">
@@ -109,60 +108,31 @@ export const HeroItem = ({title, description, prices, colors, image}) => {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-8">
-                        <button className="primary-btn uppercase">View Details</button>
+                    <div className="hidden lg:flex items-center gap-8">
+                        <NavLink to="product-details/1">
+                            <button className="primary-btn uppercase">View Details</button>
+                        </NavLink>
                         <NavLink to="/shop">
                             <button className="secondary-btn uppercase">View Shop</button>
                         </NavLink>
                     </div>
                 </div>
-
-                <div className="right bg-white p-5 w-1/2 h-full flex justify-center items-center relative z-50">
+                
+                <div className="hidden right bg-white p-5 mt-4 w-1/2 h-full md:flex justify-center items-center relative z-50">
                     <img src={image} alt="" className="h-[60vh] w-full object-contain"/>
                 </div>
+                
+                <div className="flex flex-col md:hidden p-12">
+                <Title level={1} className={`leading-none font-medium text-2xl md:text-3xl lg:text-[70px] lg:leading-tight pb-5`}>{title}</Title>
+                    <img src={image} alt="" className="h-[60vh] w-full object-contain pb-12"/>
+                </div>
+
+
+
+
+
                 <div className="lg:bg-black lg:h-[90vh] lg:absolute lg:top-0 lg:right-0 lg:w-1/3 lg:-z-10"></div>
             </section>
-        </>
-    )
-}
-
-const Banner = () => {
-    return (
-        <>
-            <div className="py-20 container flex flex-col lg:flex-row items-center gap-5">
-                <div>
-                    <BannerCard title="Wooden Water Bottles" desc="Up to 40%" cover="src/assets/images/hero/product1-1.png" />
-                </div>
-                <div className="flex justify-between flex-col gap-8">
-                    <BannerCard title="Wooden Water Bottles" desc="Up to 40%" cover="src/assets/images/hero/product2.png" className={true}/>
-                    <BannerCard title="Wooden Water Bottles" desc="Up to 40%" cover="src/assets/images/hero/product3.png" className={true} classSecond={true}/>
-                </div>
-            </div>
-        </>
-    )
-}
-
-const BannerCard = ({title, desc, cover, className, classSecond}) => {
-    return (
-        <>
-            <div className="w-full h-full relative">
-                <img src={cover} alt="" />
-                <div className={`${
-                    className 
-                        ? "absolute bottom-0 p-8 w-full" 
-                        : "flex absolute bottom-0 p-8 w-full"
-                    } ${className && classSecond ? "left-0 lg:left-48 top-0 w-96" : ""}`}
-                >    
-                    <div>
-                        <Title level={2}>{title}</Title>
-                        <p className="text-lg font-normal leading-none">{desc}</p>
-                    </div>
-
-                    <div className="w-1/2 mt-5">
-                        <button className="secondary-btn flex justify-end">shop now</button>
-                    </div>
-                </div>
-            </div>
         </>
     )
 }

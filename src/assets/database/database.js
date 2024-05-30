@@ -14,58 +14,44 @@ export const menulists = [
   export const herolist = [
     {
       id: 1,
-      title: "Natural Wooden Products",
+      title: "For the Love of Pushing Boundaries",
       description:
-        "Sell globally in minutes with localized currencies, languages, and experiences in every market.",
+        "Silver Enamelled Statement Collar Necklace. Crafted in 925 Oxidised Silver. Uniquely handcrafted, no two pieces are exactly alike!.",
       image: "src/assets/images/hero/h1.png",
       price: [
         {
-          color: "red",
+          color: "#B76E79",
           value: 135.78,
         },
         {
-          color: "yellow",
+          color: "#e73895",
           value: 185.27,
-        },
-        {
-          color: "green",
-          value: 125.62,
         },
       ],
       color: [
-        { value: "red" },
-        { value: "yellow" },
-        {
-          value: "green",
-        },
+        { value: "#B76E79" },
+        { value: "#e73895" },
       ],
     },
     {
       id: 2,
-      title: "Explore Wooden Products",
+      title: "Lady Luck Necklace in 925 Silver",
       description:
-        "Sell globally in minutes with localized currencies, languages, and experiences in every market.",
+        "Silver Collar Necklace with Synthetic Ruby Accents. Crafted in Gold Plated 925 Silver with an Antique Finish. Uniquely handcrafted, no two pieces are exactly alike!",
       image: "src/assets/images/hero/h2.png",
       price: [
         {
-          color: "red",
+          color: "#B76E79",
           value: 154.23,
         },
         {
-          color: "yellow",
+          color: "#e73895",
           value: 123.43,
-        },
-        {
-          color: "green",
-          value: 43.34,
         },
       ],
       color: [
-        { value: "red" },
-        { value: "yellow" },
-        {
-          value: "green",
-        },
+        { value: "#B76E79" },
+        { value: "#e73895" },
       ],
     },
   ];
@@ -73,9 +59,9 @@ export const menulists = [
   export const productlists = [
     {
       id: 1,
-      title: "Wooden single drawer",
+      title: "Rose Gold Necklace",
       description:
-        "Enhance your home decor with our Wooden Single Drawer. Crafted with precision and designed for functionality, this drawer provides ample storage space while adding a touch of elegance to any room. The rich wooden finish complements a variety of interior styles, making it a versatile addition to your home. The discount of 10% makes it an affordable choice, and with a rating of 2.5, it's a reliable and stylish furniture piece. Featured as a top pick, this drawer is a must-have for those who appreciate quality craftsmanship.",
+        "You can express your love in different ways and this necklace serves just the purpose. Try something new this time and make her moment special in your unique way.",
       images: [
         { image: "/src/assets/images/product/product1.png" },
         { image: "/src/assets/images/product/product1.3.png" },
@@ -93,9 +79,9 @@ export const menulists = [
     },
     {
       id: 2,
-      title: "Wooden Serving Bowl",
+      title: "Red Baguette Pendant",
       description:
-        "Elevate your dining experience with our exquisite Wooden Serving Bowl. Carved from high-quality wood, this bowl brings a touch of nature to your table. Its deep design is perfect for serving salads, fruits, or your favorite dishes. The 15% discount makes it an excellent deal, and with a rating of 4.2, it combines style and functionality seamlessly. Although not featured, this bowl stands out as a practical and beautiful addition to your kitchen.",
+        "Treasure this lovely necklace just like your treasured love. Present this to evoke a sense of charm and inspire love in others.",
       images: [
         { image: "/src/assets/images/product/product2.png" },
         { image: "/src/assets/images/product/product1.3.png" },
@@ -113,9 +99,9 @@ export const menulists = [
     },
     {
       id: 3,
-      title: "Wooden Glass",
+      title: "Baguette Earrings",
       description:
-        "Sip in style with our Wooden Glass collection. Crafted with precision, these wooden glasses add a natural touch to your beverage experience. The set includes glasses in various colors to suit your mood. With a 12% discount, these glasses offer both aesthetics and affordability. Rated at 4.5, these glasses are perfect for daily use or special occasions, making them a versatile addition to your glassware collection.",
+        "Treasure these lovely pair of earrings just like your treasured love. Present these to evoke a sense of charm and inspire love in others.",
       images: [
         { image: "/src/assets/images/product/product3.png" },
         { image: "/src/assets/images/product/product1.2.png" },
@@ -133,9 +119,9 @@ export const menulists = [
     },
     {
       id: 4,
-      title: "Wooden Cup",
+      title: "Silver Heart Of The Ocean",
       description:
-        "Experience the warmth of wooden craftsmanship with our Wooden Cup collection. Each cup is meticulously crafted to bring a rustic charm to your kitchen. The 18% discount makes it an excellent value, and with a high rating of 4.8, these cups are a favorite among those who appreciate quality. Not featured, but certainly not to be overlooked, these wooden cups are perfect for enjoying your favorite beverages.",
+        "The Silver Heart Of The Ocean Set of 3 is inspired by the answers to the constant validations that you seek to know how deep is your love!.",
       images: [
         { image: "/src/assets/images/product/product4.png" },
         { image: "/src/assets/images/product/product1.1.png" },
@@ -157,9 +143,9 @@ export const menulists = [
     },
     {
       id: 5,
-      title: "Wooden Coffee Mug",
+      title: "Silver Valentine Pendant",
       description:
-        "Start your day with the charm of our Wooden Coffee Mugs. Crafted with care, these mugs bring a touch of nature to your morning routine. The 15% discount ensures affordability without compromising on style. With a rating of 4.0, these mugs are not just functional but also visually appealing. While not featured, they are a delightful addition to any coffee lover's collection.",
+        "This adorable pendant undoubtedly adds a touch of glamour to your neckline. Just imagine how stunning you'll look wearing it!.",
       images: [
         { image: "/src/assets/images/product/product5.png" },
         { image: "/src/assets/images/product/product1.3.png" },
@@ -177,9 +163,9 @@ export const menulists = [
     },
     {
       id: 6,
-      title: "Wooden Brush",
+      title: "The Ocean Studs",
       description:
-        "Upgrade your grooming routine with our Wooden Brush collection. Made with high-quality materials, these brushes offer a natural and comfortable grooming experience. The 20% discount makes them a great value, and with a rating of 4.2, they are a reliable choice for your daily routine. Although not featured, these wooden brushes stand out for their durability and eco-friendly design.",
+        "The Silver Heart Of The Ocean Studs are inspired by the answers to the constant validations that you seek to know how deep is your love!.",
       images: [
         { image: "/src/assets/images/product/product6.png" },
         { image: "/src/assets/images/product/product1.2.png" },
@@ -197,9 +183,9 @@ export const menulists = [
     },
     {
       id: 7,
-      title: "Wooden Bottles",
+      title: " Emerald Sunshine Studs",
       description:
-        "Elevate your hydration experience with our Wooden Bottles. Crafted with precision and designed for durability, these bottles are an eco-friendly choice for your daily water intake. The 15% discount makes them an affordable and sustainable option. With a rating of 3.5, these bottles are a practical and stylish addition to your daily routine.",
+        "Like the greenery that soothes your eye, these decorative earrings give a composure with grandness. They would be the perfect addition to complete your festive attire.",
       images: [
         { image: "/src/assets/images/product/product7.png" },
         { image: "/src/assets/images/product/product1.3.png" },
@@ -217,9 +203,9 @@ export const menulists = [
     },
     {
       id: 8,
-      title: "Luxury Couch",
+      title: "Emerald Sunshine Ring",
       description:
-        "Indulge in luxury with our Elegant and Comfortable Wooden Couch. Crafted with meticulous attention to detail, this couch adds a touch of sophistication to your living room. The 25% discount makes it a premium choice without compromising on quality. With an impressive rating of 4.8, this couch is a featured product for those who seek both style and comfort.",
+        "Morning sun with a pop of colours seems like the best way to start any morning right? Inspired by this beauty, we’ve made the Silver Zircon Emerald Sunshine Ring.",
       images: [
         {
           image: "/src/assets/images/product/product8.png",

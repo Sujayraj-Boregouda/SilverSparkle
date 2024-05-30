@@ -9,7 +9,7 @@ export const Home = () => {
         <Hero/>
         <Product />
         <ShippingInfo/>
-        <Banner/>
+        
         <ProductSlide/>
         <Testimonials/>
 

@@ -2,10 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 
 import logo from "../../../src/assets/common/logo.png"
 import { menulists } from '../../assets/database/database';
-import { CustomLink, CustomNavLink } from './CustomComponents';
-import { IoSearchOutline, IoHeartOutline } from 'react-icons/io5';
+import { CustomNavLink } from './CustomComponents';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { ModelCart } from '../cart/ModelCart';
 
 
@@ -66,10 +65,12 @@ const Header = () => {
             </div>    
         )}
 
-        <nav className='p-4 flex justify-between items-center relative'>
+        <nav className='flex justify-between items-center relative'>
             <div className='flex items-center gap-14'>
                 <div>
-                    <img src={logo} className="h-12" alt="logo-image" />
+                    <NavLink to="/">
+                        <img src={logo} className="h-14" alt="logo-image" />
+                    </NavLink>
                 </div>
 
                 <div className='hidden lg:flex items-center justify-between gap-8'>
@@ -83,36 +84,13 @@ const Header = () => {
 
 
             <div className='flex items-center gap-8 icons'>
-                <div className='uppercase hidden lg:block text-inherit relative z-20'>
-                    <CustomLink 
-                        className={`${
-                            isScrolled || !isHomePage ? "text-primary" : "text-white"
-                        }`}
-                    >
-                        Login
-                    </CustomLink>
                     
-                    <span className={`${
-                         isScrolled || !isHomePage ? "text-primary" : "text-white" 
-                        }`}
-                    >   
-                        /
-                    </span>
-
-                    <CustomLink className={`${
-                         isScrolled || !isHomePage ? "text-primary" : "text-white" 
-                        }`}
-                    >   
-                        Register
-                    </CustomLink>
-                </div>
-                
+            
                 <div 
                     className={`icon flex items-center justify-center gap-6 ${
                         isScrolled || !isHomePage ? "text-primary" : "text-white" 
                    }`}
                 >
-                        <IoSearchOutline size={23}/>
 
                         <ModelCart/>
                     

@@ -1,12 +1,17 @@
 import logo from "../../../src/assets/common/logo.png";
 import { BodyOne, Caption, CustomLink, Title } from "./CustomComponents";
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <>
       <footer>
         <div className="container grid-cols-1 grid md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
           <div>
-            <img src={logo} alt="logo" className="h-16"/>
+
+            <NavLink to="/">
+              <img src={logo} alt="logo" className="h-16"/>
+            </NavLink>
 
             <div className="flex flex-col gap-2 mt-5">
               <Caption>Addess : 451 Wall Street, UK, London</Caption>

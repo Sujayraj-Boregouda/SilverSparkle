@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { CartPage, Home, Layout, ProductDetails, Shop } from "./router";
+import { Home, Layout, ProductDetails, Shop } from "./router";
+import NotFound from "./NotFound";
 
 const App = () => {
   return (
@@ -30,14 +31,14 @@ const App = () => {
               </Layout>
             }
           />
-          <Route
-            path="/cart"
+         <Route
+            path="*"
             element={
               <Layout>
-                <CartPage />
+                <NotFound/>
               </Layout>
             }
-          />
+          /> 
         </Routes>
       </BrowserRouter>
     </>

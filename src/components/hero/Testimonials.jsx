@@ -7,7 +7,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 function SampleNextArrow(props) {
     const { onClick } = props;
     return (
-      <div className="absolute bottom-0 right-0 bg-white text-primary rounded-full slider-btn z-10 shadow" onClick={onClick}>
+      <div className="absolute md:-bottom-[60px] xl:bottom-0 right-0 bg-white text-primary rounded-full slider-btn z-10 shadow" onClick={onClick}>
           <button className="next">
               <MdKeyboardArrowRight size={50}/>
           </button>
@@ -18,7 +18,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
-      <div className="absolute bottom-0 right-20 bg-white text-primary rounded-full slider-btn z-10 shadow" onClick={onClick}>
+      <div className="absolute md:-bottom-[60px] xl:bottom-0 right-20 bg-white text-primary rounded-full slider-btn z-10 shadow" onClick={onClick}>
           <button className="next">
               <MdKeyboardArrowLeft size={50}/>
           </button>
@@ -36,10 +36,10 @@ export const Testimonials = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   }
-    
+     
   return (
     <>
-        <section className="testimonials">
+        <section className="hidden md:block testimonials">
             <div className="container h-full flex items-center justify-center">
                 <div className="w-1/2 flex relative z-50">
                     <div className="box w-96 h-96 bg-white rounded-full z-50">

@@ -9,13 +9,13 @@ import { Caption, Title } from "../common/CustomComponents";
 const filterDiscoverItems = [
     {
       id: 1,
-      title: "Filter & Discover",
+      title: "15-Day Return & Exchange",
       icon: <IoIosColorFilter size={70} />,
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     },
     {
       id: 2,
-      title: "Add To Cart",
+      title: "925 Sterling Silver",
       icon: <IoBagRemoveOutline size={70} />,
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     },
@@ -27,7 +27,7 @@ const filterDiscoverItems = [
     },
     {
       id: 4,
-      title: "Enjoy The Product",
+      title: "Always Cadmium Free",
       icon: <FiBox size={70} />,
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     },
@@ -36,14 +36,14 @@ const filterDiscoverItems = [
 export const InstagramPost = () => {
   return (
     <>
-        <section className="post grid-cols-1 grid md:grid-cols-3 lg:grid-cols-6">
+        <section className="hidden post grid-cols-1 grid md:grid-cols-3 lg:grid-cols-6">
             {instagramPosts.map((post) => (
                 <>
                     <div className="h-72 lg:h-80 overflow-hidden" key={post.id}>
                         <img 
                             src={post.image} 
                             alt="insta-post" 
-                            className="w-full h-full object-cover transition-transform ease-in-out hover:-rotate-12 hover:scale-125"
+                            className="w-full md:px-8 xl:px-16 h-full object-contain transition-transform ease-in-out hover:-rotate-12 hover:scale-125"
                         />
                     </div>
                 </>
@@ -58,7 +58,7 @@ export const InstagramPost = () => {
 export const FilterDiscover = () => {
     return (
         <>
-            <section className="grid-cols-1 grid md:grid-cols-2 lg:grid-cols-4 bg-white-100">
+            <section className="grid-cols-1 grid lg:grid-cols-2 xl:grid-cols-4 bg-white-100">
                 {filterDiscoverItems.map((post) => (
                     <>
                         <div className="flex items-center gap-8 p-8 py-12 relative">
