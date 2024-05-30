@@ -43,11 +43,17 @@ export const ProductCard = ({id, key, title, description, images, price, discoun
   }
   
   const discountPrice = price[0].value - (price[0].value * discount) / 100;
-
-  const addToCart = () => {
-    dispatch(CartActions.addToCart({id, title, price:discountPrice, images}))
-  }
   
+  const addToCart = () => {
+    dispatch(CartActions.addToCart({
+        id: id,
+        name: title,
+        price: discountPrice,
+        images,
+        quantity: 1 // Ensure quantity is explicitly set to 1
+    }));
+  };
+
   const addToFavories = () => {
     dispatch(favoriteActions.addToFavorites({id, title, price:discountPrice, images}))
   }

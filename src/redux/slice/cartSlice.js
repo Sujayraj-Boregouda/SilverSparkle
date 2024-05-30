@@ -4,7 +4,7 @@ const cartSlice = createSlice({
     name: "cart",
     initialState: {
         itemList: [],
-        totalQuantity: 0,
+        totalQuantity: 0, // number of unique items
     },
     reducers: {
         addToCart(state, action) {
@@ -12,50 +12,51 @@ const cartSlice = createSlice({
             const existingItem = state.itemList.find((item) => item.id === newItem.id);
 
             if (existingItem) {
-                existingItem.quantity++;
-                existingItem.totalQuantity += newItem.price;
+                existingItem.quantity += newItem.quantity;
+                existingItem.totalPrice += newItem.price * newItem.quantity;
             } else {
                 state.itemList.push({
                     id: newItem.id,
                     price: newItem.price,
-                    quantity: 1,
-                    totalPrice: newItem.price,
+                    quantity: newItem.quantity,
+                    totalPrice: newItem.price * newItem.quantity,
                     name: newItem.name,
                     cover: newItem.images
-                })
-                state.totalQuantity++;
+                });
+                state.totalQuantity++; // Increment only when a new unique item is added
             }
         },
         removeFromCart(state, action) {
             const id = action.payload;
-
             const existingItem = state.itemList.find((item) => item.id === id);
 
-            if(existingItem.quantity === 1) {
-                state.itemList = state.itemList.filter((item) => item.id !== id);
-                state.totalQuantity--;
-            } else {
-                existingItem.quantity--;
-                existingItem.totalPrice -= existingItem.price;
+            if (existingItem) {
+                if (existingItem.quantity === 1) {
+                    state.itemList = state.itemList.filter((item) => item.id !== id);
+                    state.totalQuantity--; // Decrement only when a unique item is removed
+                } else {
+                    existingItem.quantity--;
+                    existingItem.totalPrice -= existingItem.price;
+                }
             }
         },
         removeFromAllCart(state, action) {
             const id = action.payload;
-            
-            state.itemList = state.itemList.filter((item) => item.id !== id);
-            state.totalQuantity -= state.itemList.reduce((acc, item) => acc + item.quantity,0)
+            const itemToRemove = state.itemList.find((item) => item.id === id);
+
+            if (itemToRemove) {
+                state.itemList = state.itemList.filter((item) => item.id !== id);
+                state.totalQuantity--; // Decrement for removing a unique item
+            }
         }
     },
-    
 })
 
 export const CartActions = cartSlice.actions;
 
-export const {} = cartSlice.actions;
-
 export const selectTotalQuantity = createSelector(
     (state) => state.cart.itemList,
-    (itemList) => itemList.reduce((acc) => acc + 1, 0)
+    (itemList) => itemList.length // Number of unique items
 );
 
 export const selectTotalPrice = createSelector(
@@ -64,4 +65,3 @@ export const selectTotalPrice = createSelector(
 );
 
 export default cartSlice;
-

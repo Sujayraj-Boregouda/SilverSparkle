@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { productlists } from "../../assets/database/database";
 import { BodyOne, Caption, Title } from "../../components/common/CustomComponents";
 import { RenderRatingStars } from "../../components/product/ProductCard";
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 import { BiHeart, BiMinus, BiPlus } from "react-icons/bi";
 import { FilterDiscover } from "../../components/hero/InstagramPost";
 import { ProductSlideCard } from "../../components/product/ProductSlide";
@@ -48,6 +48,11 @@ export const ProductDetails = () => {
     price.find((price) => price.color === color[0].value)
   );
   const [quantity, setQuantity] = useState(1);
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setQuantity(1);
+  }, [productId]);
 
   const handleColorClick = (color) => {
     const newSelectedPrice = price.find((price) => price.color === color);
@@ -73,9 +78,15 @@ export const ProductDetails = () => {
   };
 
   const discountPrice = selectedPrice.value - (selectedPrice.value * discount) / 100;
-
+  
   const addToCart = () => {
-    dispatch(CartActions.addToCart({ id: product.id, title, price: discountPrice, images, quantity }));
+    dispatch(CartActions.addToCart({
+        id: product.id,
+        name: title,
+        price: discountPrice,
+        images,
+        quantity
+    }));
   };
 
   const addToFavories = () => {
