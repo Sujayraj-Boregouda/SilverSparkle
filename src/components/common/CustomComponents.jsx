@@ -7,7 +7,7 @@ const Title = ({ level, children, className }) => {
     level === 1
       ? "text-[80px] font-[600] text-primary"
       : level === 2
-      ? "text-[40px] font-[700] text-primary leading-tight"
+      ? "text-[32px] md:text-[40px] font-[700] text-primary leading-tight"
       : level === 3
       ? "text-[28px] font-[700] text-primary"
       : level === 4

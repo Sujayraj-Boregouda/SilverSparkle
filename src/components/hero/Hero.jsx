@@ -11,7 +11,7 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";impor
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <div className="absolute bottom-0 left-96 lg:left-1/2 slider-btn" onClick={onClick}>
+    <div className="absolute bottom-0 hidden md:block md:left-96 lg:left-1/2 slider-btn" onClick={onClick}>
         <button className="next">
             <MdKeyboardArrowRight size={50}/>
         </button>
@@ -22,7 +22,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div className="absolute bottom-0 bg-white text-primary left-96 lg:left-[45.2%] slider-btn z-10" onClick={onClick}>
+    <div className="absolute bottom-0 bg-white text-primary left-0 md:left-96 lg:left-[45.2%] slider-btn z-10" onClick={onClick}>
         <button className="next">
             <MdKeyboardArrowLeft size={50}/>
         </button>
@@ -79,7 +79,7 @@ export const HeroItem = ({title, description, prices, colors, image}) => {
         <>
             <section className="content flex justify-between lg:px-16 h-[60vh] lg:h-[90vh] relative z-20">
                 <div className="hidden md:block left w-1/2 p-8 lg:pt-32 lg:py-32 lg:pb-64">
-                    <Title level={1} className={`leading-none font-medium  md:text-3xl lg:text-[70px] lg:leading-tight pb-5`}>{title}</Title>
+                    <Title level={1} className={`leading-none font-medium text-[24px] md:text-3xl lg:text-[70px] lg:leading-tight pb-5`}>{title}</Title>
                     <BodyOne>{description}</BodyOne>
 
                     <div className="flex items-start gap-8 my-5 pt-1">
@@ -123,14 +123,9 @@ export const HeroItem = ({title, description, prices, colors, image}) => {
                 </div>
                 
                 <div className="flex flex-col md:hidden p-12">
-                <Title level={1} className={`leading-none font-medium text-2xl md:text-3xl lg:text-[70px] lg:leading-tight pb-5`}>{title}</Title>
+                    <Title level={1} className={`leading-none font-medium text-xl md:text-3xl lg:text-[70px] lg:leading-tight pb-5`}>{title}</Title>
                     <img src={image} alt="" className="h-[60vh] w-full object-contain pb-12"/>
                 </div>
-
-
-
-
-
                 <div className="lg:bg-black lg:h-[90vh] lg:absolute lg:top-0 lg:right-0 lg:w-1/3 lg:-z-10"></div>
             </section>
         </>

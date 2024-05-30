@@ -299,6 +299,14 @@ body {
   display: none;
 }
 
+.slideproduct .card-images {
+  overflow: visible;
+}
+
+.slideproduct .slick-dots {
+  bottom: -130px;
+}
+
 @media only screen and (max-width: 1280px) {
   .modal-overlay {
     top: 50%;

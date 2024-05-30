@@ -108,12 +108,12 @@ export const ProductDetails = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
+  
   return (
     <>
       <section className="container mt-32 slideproduct">
         <div className="flex justify-between flex-col lg:flex-row" key={productId}>
-          <div className="images lg:w-1/2">
+          <div className="card-images images lg:w-1/2">
             <div>
               <Slider {...settings}>
                 {images.map((image, index) => (
@@ -127,8 +127,8 @@ export const ProductDetails = () => {
               </Slider>
             </div>
           </div>
-
-          <div className="details lg:w-1/2 px-16 pt-16">
+          
+          <div className="details lg:w-1/2 px-0 mt-[50px] lg:px-16 pt-16">
             <button className="feature-btn bg-indigo-600">
               SALE {discount}% OFF
             </button>

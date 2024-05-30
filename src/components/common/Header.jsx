@@ -49,13 +49,13 @@ const Header = () => {
     <header 
         className={
             isHomePage 
-            ? `header px-12 py-3 bg-white-100 relative z-20 ${
+            ? `header px-8 md:px-12 py-3 bg-white-100 relative z-20 ${
                 isScrolled ? "scrolled" : ""
             }` 
-            : `header px-12 py-3 relative z-20 ${isScrolled ? "scrolled" : "" }`
+            : `header px-8 md:px-12 py-3 relative z-20 ${isScrolled ? "scrolled" : "" }`
         }
     >
-
+    
         {isHomePage && (
             <div 
                 className={`${
